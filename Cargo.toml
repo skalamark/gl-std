@@ -6,7 +6,7 @@ version = "0.1.0-alpha"
 authors = ["JoseCarlosSkar <josecarlosskar@gmail.com>"]
 edition = "2018"
 license = "MIT"
-description = "std para a linguagem de script GLanguage"
+description = "Std GLanguage"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
