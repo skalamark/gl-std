@@ -2,11 +2,14 @@
 
 use gl_core::preludes::*;
 
+mod preludes;
+
 pub struct Std {}
 
 impl Std {
 	pub fn new() -> Env {
-		let env: Env = Env::new();
+		let mut env: Env = Env::new();
+		preludes::load(&mut env);
 		env
 	}
 }
