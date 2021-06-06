@@ -4,6 +4,16 @@ use std::{thread, time};
 
 use gl_core::preludes::*;
 
+use crate::Std;
+
+impl Std {
+	pub fn time() -> HashMap<String, Object> {
+		let mut env: HashMap<String, Object> = HashMap::new();
+		env.insert(format!("sleep"), Object::Builtin(format!("sleep"), 1, sleep));
+		env
+	}
+}
+
 pub fn sleep(args: Vec<Object>) -> Result<Object, Exception> {
 	if let Object::Integer(duration_integer) = args.get(0).unwrap() {
 		let duration: time::Duration =
