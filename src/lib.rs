@@ -16,4 +16,6 @@ impl Std {
 		env.set("std", Object::ModuleRust(format!("std"), env_std));
 		env
 	}
+
+	fn std(env: &mut HashMap<String, Object>) {}
 }
